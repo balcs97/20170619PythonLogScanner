@@ -1,0 +1,55 @@
+May 24 09:28:22 localhost sshd[29817]: Accepted password for vic from 10.0.2.2 port 7858 ssh2
+May 24 09:28:22 localhost sshd[29817]: pam_unix(sshd:session): session opened for user vic by (uid=0)
+May 24 09:28:43 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/yum update
+May 24 11:04:20 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/yum install bind
+May 24 11:04:27 localhost groupadd[30502]: group added to /etc/group: name=named, GID=25
+May 24 11:04:27 localhost groupadd[30502]: group added to /etc/gshadow: name=named
+May 24 11:04:27 localhost groupadd[30502]: new group: name=named, GID=25
+May 24 11:04:27 localhost useradd[30506]: new user: name=named, UID=25, GID=25, home=/var/named, shell=/sbin/nologin
+May 24 11:09:31 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/vim /etc/named.conf
+May 24 11:28:13 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/vim /etc/hosts
+May 24 11:36:08 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/vim /etc/hosts
+May 24 11:37:30 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/vim /etc/hosts
+May 24 11:39:41 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/vim /etc/sysconfig/network
+May 24 11:52:19 localhost sudo:     vic : TTY=pts/0 ; PWD=/home/vic ; USER=root ; COMMAND=/bin/vim /etc/sysconfig/network-scripts/ifcfg-enp0s8
+May 24 12:55:19 localhost sshd[29821]: error: Received disconnect from 10.0.2.2: 0:
+May 24 12:55:19 localhost sshd[29817]: pam_unix(sshd:session): session closed for user vic
+[vic@localhost log]$ sudo cat secure-20170618
+Jun 16 16:29:43 localhost sshd[7282]: Accepted password for vic from 10.0.2.2 port 4988 ssh2
+Jun 16 16:29:43 localhost sshd[7282]: pam_unix(sshd:session): session opened for user vic by (uid=0)
+Jun 16 16:32:04 localhost sudo:     vic : TTY=pts/0 ; PWD=/var/www ; USER=root ; COMMAND=/bin/tar -zcvf indexbackup.tar.gz index.html
+Jun 16 18:08:21 localhost sudo:     vic : TTY=pts/0 ; PWD=/var/www ; USER=root ; COMMAND=/bin/vim /etc/exports
+Jun 16 18:14:47 localhost sudo:     vic : TTY=pts/0 ; PWD=/var/www ; USER=root ; COMMAND=/bin/vim /etc/exports
+Jun 16 18:18:29 localhost sudo:     vic : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/bin/mkdir public
+Jun 16 18:25:33 localhost sudo:     vic : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/bin/systemctl start nfs.service
+Jun 16 18:25:33 localhost polkitd[623]: Registered Authentication Agent for unix-process:7769:105202768 (system bus name :1.6194 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale zh_TW.UTF-8)
+Jun 16 18:25:33 localhost polkitd[623]: Unregistered Authentication Agent for unix-process:7769:105202768 (system bus name :1.6194, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale zh_TW.UTF-8) (disconnected from bus)
+Jun 16 18:26:52 localhost unix_chkpwd[7779]: password check failed for user (root)
+Jun 16 18:26:52 localhost userhelper[7775]: pam_unix(setup:auth): authentication failure; logname=vic uid=1001 euid=0 tty=pts/0 ruser=vic rhost=  user=root
+Jun 16 18:26:52 localhost userhelper[7775]: pam_succeed_if(setup:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:26:56 localhost unix_chkpwd[7781]: password check failed for user (root)
+Jun 16 18:26:56 localhost userhelper[7775]: pam_succeed_if(setup:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:27:03 localhost unix_chkpwd[7783]: password check failed for user (root)
+Jun 16 18:27:03 localhost userhelper[7775]: pam_succeed_if(setup:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:27:04 localhost userhelper[7775]: PAM 2 more authentication failures; logname=vic uid=1001 euid=0 tty=pts/0 ruser=vic rhost=  user=root
+Jun 16 18:28:06 localhost unix_chkpwd[7809]: password check failed for user (root)
+Jun 16 18:28:06 localhost su: pam_unix(su:auth): authentication failure; logname=vic uid=1001 euid=0 tty=pts/0 ruser=vic rhost=  user=root
+Jun 16 18:28:06 localhost su: pam_succeed_if(su:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:28:16 localhost unix_chkpwd[7812]: password check failed for user (root)
+Jun 16 18:28:16 localhost userhelper[7810]: pam_unix(setup:auth): authentication failure; logname=vic uid=1001 euid=0 tty=pts/0 ruser=vic rhost=  user=root
+Jun 16 18:28:16 localhost userhelper[7810]: pam_succeed_if(setup:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:28:21 localhost unix_chkpwd[7814]: password check failed for user (root)
+Jun 16 18:28:21 localhost userhelper[7810]: pam_succeed_if(setup:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:28:25 localhost unix_chkpwd[7816]: password check failed for user (root)
+Jun 16 18:28:25 localhost userhelper[7810]: pam_succeed_if(setup:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:28:27 localhost userhelper[7810]: PAM 2 more authentication failures; logname=vic uid=1001 euid=0 tty=pts/0 ruser=vic rhost=  user=root
+Jun 16 18:28:33 localhost unix_chkpwd[7819]: password check failed for user (root)
+Jun 16 18:28:33 localhost su: pam_unix(su:auth): authentication failure; logname=vic uid=1001 euid=0 tty=pts/0 ruser=vic rhost=  user=root
+Jun 16 18:28:33 localhost su: pam_succeed_if(su:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:28:48 localhost unix_chkpwd[7824]: password check failed for user (root)
+Jun 16 18:28:48 localhost su: pam_unix(su:auth): authentication failure; logname=vic uid=1001 euid=0 tty=pts/0 ruser=vic rhost=  user=root
+Jun 16 18:28:48 localhost su: pam_succeed_if(su:auth): requirement "uid >= 1000" not met by user "root"
+Jun 16 18:33:20 localhost sudo:     vic : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/bin/yum update
+Jun 16 18:37:15 localhost sudo:     vic : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/bin/vim /etc/samba/smb.conf
+Jun 16 18:50:32 localhost sshd[7286]: error: Received disconnect from 10.0.2.2: 0:
+Jun 16 18:50:33 localhost sshd[7282]: pam_unix(sshd:session): session closed for user vic
